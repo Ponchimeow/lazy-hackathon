@@ -79,41 +79,41 @@ body, ul {
 
 /* title - 各區塊標題 */
 .description .section__title span::before {
-  -webkit-mask-image: url("./../image/title_description.png");
-          mask-image: url("./../image/title_description.png");
+  -webkit-mask-image: url("./../image/title_description.svg");
+          mask-image: url("./../image/title_description.svg");
 }
 
 .team .section__title span::before {
   width: 22px;
   height: 22px;
-  -webkit-mask-image: url("./../image/title_team.png");
-          mask-image: url("./../image/title_team.png");
+  -webkit-mask-image: url("./../image/title_team.svg");
+          mask-image: url("./../image/title_team.svg");
 }
 
 .schedule .section__title span::before {
-  -webkit-mask-image: url("./../image/title_schedule.png");
-          mask-image: url("./../image/title_schedule.png");
+  -webkit-mask-image: url("./../image/title_schedule.svg");
+          mask-image: url("./../image/title_schedule.svg");
 }
 
 .history .section__title span::before {
   width: 25px;
   height: 25px;
   top: 5px;
-  -webkit-mask-image: url("./../image/title_history.png");
-          mask-image: url("./../image/title_history.png");
+  -webkit-mask-image: url("./../image/title_history.svg");
+          mask-image: url("./../image/title_history.svg");
   background-color: #FAD312;
 }
 
 .judge .section__title span::before {
   color: #fff;
-  -webkit-mask-image: url("./../image/title_judge.png");
-          mask-image: url("./../image/title_judge.png");
+  -webkit-mask-image: url("./../image/title_judge.svg");
+          mask-image: url("./../image/title_judge.svg");
   background-color: #FAD312;
 }
 
 .subscribe .section__title span::before {
-  -webkit-mask-image: url("./../image/title_subscribe.png");
-          mask-image: url("./../image/title_subscribe.png");
+  -webkit-mask-image: url("./../image/title_subscribe.svg");
+          mask-image: url("./../image/title_subscribe.svg");
 }
 
 /* ------- layout ------- */
@@ -440,8 +440,8 @@ ul {
   background-color: #000;
   -webkit-mask-size: cover;
           mask-size: cover;
-  -webkit-mask-image: url("./../image/add-circular-outlined-button.png");
-          mask-image: url("./../image/add-circular-outlined-button.png");
+  -webkit-mask-image: url("./../image/add-circular-outlined-button.svg");
+          mask-image: url("./../image/add-circular-outlined-button.svg");
   position: absolute;
   right: 10px;
 }
@@ -690,25 +690,25 @@ ul {
 }
 
 .comments__icon.icon-strength {
-  -webkit-mask-image: url("./../image/icon-strength.png");
-          mask-image: url("./../image/icon-strength.png");
+  -webkit-mask-image: url("./../image/icon-strength.svg");
+          mask-image: url("./../image/icon-strength.svg");
 }
 
 .comments__icon.icon-buddha {
   width: 80px;
   height: 80px;
-  -webkit-mask-image: url("./../image/icon-buddha.png");
-          mask-image: url("./../image/icon-buddha.png");
+  -webkit-mask-image: url("./../image/icon-buddha.svg");
+          mask-image: url("./../image/icon-buddha.svg");
 }
 
 .comments__icon.icon-sleep {
-  -webkit-mask-image: url("./../image/icon-sleep.png");
-          mask-image: url("./../image/icon-sleep.png");
+  -webkit-mask-image: url("./../image/icon-sleep.svg");
+          mask-image: url("./../image/icon-sleep.svg");
 }
 
 .comments__icon.icon-bao {
-  -webkit-mask-image: url("./../image/icon-bao.png");
-          mask-image: url("./../image/icon-bao.png");
+  -webkit-mask-image: url("./../image/icon-bao.svg");
+          mask-image: url("./../image/icon-bao.svg");
 }
 
 /* 使用者見證 - RWD */
@@ -781,8 +781,8 @@ ul {
   background-color: #fff;
   -webkit-mask-size: cover;
           mask-size: cover;
-  -webkit-mask-image: url("./../image/add-circular-outlined-button.png");
-          mask-image: url("./../image/add-circular-outlined-button.png");
+  -webkit-mask-image: url("./../image/add-circular-outlined-button.svg");
+          mask-image: url("./../image/add-circular-outlined-button.svg");
   position: absolute;
   bottom: calc(50% - 10px);
   left: calc(50% - 10px);
@@ -1079,22 +1079,22 @@ ul {
 }
 
 .footer__social-media .footer__social-icon.icon-fb {
-  -webkit-mask-image: url("./../image/icon-fb.png");
-          mask-image: url("./../image/icon-fb.png");
+  -webkit-mask-image: url("./../image/icon-fb.svg");
+          mask-image: url("./../image/icon-fb.svg");
 }
 
 .footer__social-media .footer__social-icon.icon-twitter {
-  -webkit-mask-image: url("./../image/icon-twitter.png");
-          mask-image: url("./../image/icon-twitter.png");
+  -webkit-mask-image: url("./../image/icon-twitter.svg");
+          mask-image: url("./../image/icon-twitter.svg");
 }
 
 .footer__social-media .footer__social-icon.icon-ig {
-  -webkit-mask-image: url("./../image/icon-ig.png");
-          mask-image: url("./../image/icon-ig.png");
+  -webkit-mask-image: url("./../image/icon-ig.svg");
+          mask-image: url("./../image/icon-ig.svg");
 }
 
 .footer__social-media .footer__social-icon.icon-g-plus {
-  -webkit-mask-image: url("./../image/icon-g-plus.png");
-          mask-image: url("./../image/icon-g-plus.png");
+  -webkit-mask-image: url("./../image/icon-g-plus.svg");
+          mask-image: url("./../image/icon-g-plus.svg");
 }
 /*# sourceMappingURL=style.css.map */
