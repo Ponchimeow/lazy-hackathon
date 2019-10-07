@@ -23,21 +23,14 @@ gulp.task('minHTML', () => {
     .pipe(gulp.dest('./build/'));
 })
 
-gulp.task('concatJS', () => {
-  return gulp.src('./js/*.js')
-    .pipe(plumber())
-    .pipe(concat('all.js'))
-    .pipe(gulp.dest('./build/js/'));
-})
-
-gulp.task('uglify', gulp.series('concatJS', () => {
+gulp.task('uglify', gulp.series(() => {
   return gulp.src('./js/*.js')
     .pipe(plumber())
     .pipe(uglify({
       mangle: true,
       output: { ascii_only: true }
     }))
-    .pipe(rename(function (path) {
+    .pipe(rename((path) => {
       path.basename += ".min";
       path.extname = ".js";
     }))
