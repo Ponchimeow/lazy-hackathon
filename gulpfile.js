@@ -5,7 +5,8 @@ const gulp = require('gulp'),
   cleanCSS = require('gulp-clean-css'),
   rename = require('gulp-rename'),
   concat = require('gulp-concat'),
-  uglify = require('gulp-uglify-es').default;
+  uglify = require('gulp-uglify-es').default,
+  minHTML = require('gulp-htmlmin');
 
 gulp.task('image', (done) => {
   gulp.src('./image/**')
@@ -16,25 +17,41 @@ gulp.task('image', (done) => {
   done();
 });
 
-gulp.task('uglify', () => {
+gulp.task('minHTML', () => {
+  return gulp.src('./*.html')
+    .pipe(minHTML({ collapseWhitespace: true }))
+    .pipe(gulp.dest('./build/'));
+})
+
+gulp.task('concatJS', () => {
   return gulp.src('./js/*.js')
     .pipe(plumber())
-    .pipe(uglify())
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest('./build/js/'));
+})
+
+gulp.task('uglify', gulp.series('concatJS', () => {
+  return gulp.src('./js/*.js')
+    .pipe(plumber())
+    .pipe(uglify({
+      mangle: true,
+      output: { ascii_only: true }
+    }))
     .pipe(rename(function (path) {
       path.basename += ".min";
       path.extname = ".js";
     }))
     .pipe(gulp.dest('./build/js/'));
-});
+}));
 
-gulp.task('concat', () => {
+gulp.task('concatCSS', () => {
   return gulp.src('./css/*.css')
     .pipe(plumber())
     .pipe(concat('all.css'))
     .pipe(gulp.dest('./build/css/'));
 })
 
-gulp.task('minify-css', gulp.series('concat', () => {
+gulp.task('minify-css', gulp.series('concatCSS', () => {
   return gulp.src('./build/css/all.css')
     .pipe(plumber())
     .pipe(cleanCSS({ compatibility: 'ie8' }))
@@ -46,4 +63,4 @@ gulp.task('minify-css', gulp.series('concat', () => {
     .pipe(gulp.dest('./build/css/'));
 }));
 
-gulp.task('default', gulp.series('image', 'minify-css', 'uglify'));
+gulp.task('default', gulp.series('minHTML', 'image', 'minify-css', 'uglify'));
