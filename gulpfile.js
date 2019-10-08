@@ -14,15 +14,15 @@ gulp.task('image', (done) => {
     .pipe(plumber())
     .pipe(responsive({
       'bg_header.png': {
-        width: '50%',
+        width: '40%',
         quality: 50
       },
       'bg_*.png': {
-        width: '50%',
+        width: '40%',
         quality: 50
       },
       'bg_*.jpg': {
-        width: '50%',
+        width: '40%',
         quality: 50
       },
       'icon-community.png': {
@@ -34,11 +34,11 @@ gulp.task('image', (done) => {
         quality: 50
       },
       'judge_*.jpg': {
-        width: '50%',
+        width: '30%',
         quality: 50
       },
       'judge_*_l.jpg': {
-        width: '50%',
+        width: '40%',
         quality: 50
       },
       'team_*.jpg': {
