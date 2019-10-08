@@ -59,7 +59,7 @@ gulp.task('image', (done) => {
     }))
     .pipe(gulpImagemin())
     .pipe(webp())
-    .pipe(gulp.dest('./build/image'));
+    .pipe(gulp.dest('./dist/image'));
   done();
 });
 
@@ -69,7 +69,7 @@ gulp.task('minHTML', () => {
       collapseWhitespace: true,
       removeComments: true,
     }))
-    .pipe(gulp.dest('./build/'));
+    .pipe(gulp.dest('./dist/'));
 })
 
 gulp.task('uglify', gulp.series(() => {
@@ -83,18 +83,18 @@ gulp.task('uglify', gulp.series(() => {
       path.basename += ".min";
       path.extname = ".js";
     }))
-    .pipe(gulp.dest('./build/js/'));
+    .pipe(gulp.dest('./dist/js/'));
 }));
 
 gulp.task('concatCSS', () => {
   return gulp.src('./css/*.css')
     .pipe(plumber())
     .pipe(concat('all.css'))
-    .pipe(gulp.dest('./build/css/'));
+    .pipe(gulp.dest('./dist/css/'));
 })
 
 gulp.task('minify-css', gulp.series('concatCSS', () => {
-  return gulp.src('./build/css/all.css')
+  return gulp.src('./dist/css/all.css')
     .pipe(plumber())
     .pipe(cleanCSS({ compatibility: 'ie8' }))
     .pipe(rename(
@@ -102,7 +102,7 @@ gulp.task('minify-css', gulp.series('concatCSS', () => {
         path.basename += ".min";
         path.extname = ".css";
       }))
-    .pipe(gulp.dest('./build/css/'));
+    .pipe(gulp.dest('./dist/css/'));
 }));
 
 gulp.task('default', gulp.series('minHTML', 'image', 'minify-css', 'uglify'));
