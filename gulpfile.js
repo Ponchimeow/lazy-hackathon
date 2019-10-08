@@ -15,46 +15,46 @@ gulp.task('image', (done) => {
     .pipe(responsive({
       'bg_header.png': {
         width: '50%',
-        quality: 60
+        quality: 50
       },
       'bg_*.png': {
         width: '50%',
-        quality: 60
+        quality: 50
       },
       'bg_*.jpg': {
         width: '50%',
-        quality: 60
+        quality: 50
       },
       'icon-community.png': {
         width: 80,
-        quality: 60
+        quality: 50
       },
       'icon-member.png': {
         width: 300,
-        quality: 60
+        quality: 50
       },
       'judge_*.jpg': {
-        width: '60%',
-        quality: 60
+        width: '50%',
+        quality: 50
       },
       'judge_*_l.jpg': {
         width: '50%',
-        quality: 60
+        quality: 50
       },
       'team_*.jpg': {
-        width: 700,
-        quality: 60
+        width: 500,
+        quality: 50
       },
       'logo_nav.png': {
-        quality: 60
+        quality: 50
       },
       'title.png': {
         width: 120,
-        quality: 60
+        quality: 50
       },
       'add-circular-outlined-button.png': {
         width: 30,
-        quality: 60
+        quality: 50
       }
     }))
     .pipe(gulpImagemin())
