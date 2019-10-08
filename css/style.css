@@ -472,8 +472,8 @@ ul {
   background-color: #000;
   -webkit-mask-size: cover;
   mask-size: cover;
-  -webkit-mask-image: url("./../image/add-circular-outlined-button.svg");
-  mask-image: url("./../image/add-circular-outlined-button.svg");
+  -webkit-mask-image: url("./../image/add-circular-outlined-button.webp");
+  mask-image: url("./../image/add-circular-outlined-button.webp");
   position: absolute;
   right: 10px;
 }
@@ -834,8 +834,8 @@ ul {
   background-color: #fff;
   -webkit-mask-size: cover;
   mask-size: cover;
-  -webkit-mask-image: url("./../image/add-circular-outlined-button.svg");
-  mask-image: url("./../image/add-circular-outlined-button.svg");
+  -webkit-mask-image: url("./../image/add-circular-outlined-button.webp");
+  mask-image: url("./../image/add-circular-outlined-button.webp");
   position: absolute;
   bottom: calc(50% - 10px);
   left: calc(50% - 10px);
