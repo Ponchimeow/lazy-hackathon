@@ -22,8 +22,8 @@ gulp.task('image', (done) => {
         quality: 50
       },
       'bg_*.jpg': {
-        width: '40%',
-        quality: 50
+        width: '50%',
+        quality: 60
       },
       'icon-community.png': {
         width: 80,
