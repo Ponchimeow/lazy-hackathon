@@ -65,7 +65,10 @@ gulp.task('image', (done) => {
 
 gulp.task('minHTML', () => {
   return gulp.src('./*.html')
-    .pipe(minHTML({ collapseWhitespace: true }))
+    .pipe(minHTML({ 
+      collapseWhitespace: true,
+      removeComments: true,
+    }))
     .pipe(gulp.dest('./build/'));
 })
 
